@@ -1,0 +1,24 @@
+{
+  "manifest_version": 2,
+
+  "name": "IEEE Direct PDF",
+  "description": "An extension to open an embedded PDF directly.",
+  "version": "1.0",
+
+  "browser_action": {
+  },
+  
+  "permissions": [
+    "activeTab",
+    "tabs"
+  ],
+   "content_scripts": [
+    {
+      "matches": ["http://*.ieee.org/stamp/*"],
+      "js": ["jquery-2.2.1.min.js", "script.js"]
+    }
+  ],
+  "background": {
+    "scripts": ["background.js"]
+  }
+}
